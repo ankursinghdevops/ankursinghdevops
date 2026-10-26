@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040812"/>
+      <stop offset="50%" stop-color="#081426"/>
+      <stop offset="85%" stop-color="#050E1C"/>
+      <stop offset="100%" stop-color="#02060D"/>
+    </linearGradient>
+
+    <!-- Azure Neon Glow Gradients -->
+    <linearGradient id="azureGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0078D4"/>
+      <stop offset="50%" stop-color="#00C7FF"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#F0F9FF"/>
+      <stop offset="100%" stop-color="#BAE6FD"/>
+    </linearGradient>
+
+    <linearGradient id="tfGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#844FBA"/>
+      <stop offset="100%" stop-color="#5C2D91"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1B33" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#071224" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Precision Grid Pattern -->
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#0078D4" stroke-width="0.5" stroke-opacity="0.14"/>
+      <circle cx="36" cy="36" r="0.9" fill="#00C7FF" fill-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .name-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; font-size: 46px; fill: url(#nameGrad); letter-spacing: 2px; }
+    .role-badge { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; font-size: 19px; fill: #00C7FF; letter-spacing: 5px; text-transform: uppercase; }
+    .tagline-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 15px; fill: #94A3B8; letter-spacing: 1px; }
+    .pill-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; font-size: 11px; fill: #E0F2FE; }
+    .code-font { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; }
+  </style>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="340" rx="16" fill="url(#bg)"/>
+  <rect width="1200" height="340" rx="16" fill="url(#grid)"/>
+
+  <!-- Radial Glow Orbs -->
+  <circle cx="180" cy="90" r="150" fill="#0078D4" fill-opacity="0.12" filter="url(#glow)"/>
+  <circle cx="960" cy="170" r="180" fill="#00C7FF" fill-opacity="0.09" filter="url(#glow)"/>
+  <circle cx="580" cy="310" r="120" fill="#5C2D91" fill-opacity="0.08" filter="url(#glow)"/>
+
+  <!-- Sleek Outer Border -->
+  <rect x="2" y="2" width="1196" height="336" rx="15" fill="none" stroke="url(#azureGlow)" stroke-width="1.2" stroke-opacity="0.45"/>
+  <rect x="8" y="8" width="1184" height="324" rx="12" fill="none" stroke="#0078D4" stroke-width="0.6" stroke-opacity="0.2"/>
+
+  <!-- Neon Accent Bars -->
+  <path d="M 60 2 L 320 2" stroke="url(#azureGlow)" stroke-width="3" stroke-linecap="round" filter="url(#subtleGlow)"/>
+  <path d="M 880 2 L 1140 2" stroke="url(#azureGlow)" stroke-width="3" stroke-linecap="round" filter="url(#subtleGlow)"/>
+
+  <!-- ================= LEFT: IDENTITY & BRANDING ================= -->
+  
+  <!-- Status Chip -->
+  <g transform="translate(60, 42)">
+    <rect width="270" height="26" rx="13" fill="#0A182F" stroke="#0078D4" stroke-width="1" stroke-opacity="0.6"/>
+    <circle cx="14" cy="13" r="4" fill="#10B981" filter="url(#subtleGlow)"/>
+    <text x="28" y="17" class="pill-label" fill="#38BDF8" font-size="11px" letter-spacing="1px">AZURE CLOUD &amp; DEVOPS PLATFORM</text>
+  </g>
+
+  <!-- Name Header -->
+  <text x="60" y="118" class="name-text">ANKUR SINGH</text>
+
+  <!-- Role Subtitle -->
+  <text x="62" y="152" class="role-badge">AZURE DEVOPS ENGINEER</text>
+
+  <!-- Azure Gradient Line with Node -->
+  <rect x="62" y="168" width="220" height="3" rx="1.5" fill="url(#azureGlow)" filter="url(#subtleGlow)"/>
+  <circle cx="282" cy="169.5" r="3.5" fill="#00C7FF" filter="url(#subtleGlow)"/>
+
+  <!-- Required Tagline -->
+  <text x="62" y="202" class="tagline-text">Automating Azure Infrastructure | Terraform | CI/CD | Cloud Engineering</text>
+
+  <!-- Tech Capability Badges Row 1 -->
+  <g transform="translate(62, 226)">
+    <g transform="translate(0, 0)">
+      <rect width="130" height="30" rx="6" fill="#0A162B" stroke="#0078D4" stroke-width="0.8" stroke-opacity="0.7"/>
+      <text x="12" y="19" class="pill-label">☁️ Microsoft Azure</text>
+    </g>
+    <g transform="translate(140, 0)">
+      <rect width="144" height="30" rx="6" fill="#0A162B" stroke="#7B42BC" stroke-width="0.8" stroke-opacity="0.8"/>
+      <text x="12" y="19" class="pill-label">🏗️ Terraform (IaC)</text>
+    </g>
+    <g transform="translate(294, 0)">
+      <rect width="166" height="30" rx="6" fill="#0A162B" stroke="#0078D4" stroke-width="0.8" stroke-opacity="0.7"/>
+      <text x="12" y="19" class="pill-label">⚡ Azure DevOps (CI/CD)</text>
+    </g>
+    <g transform="translate(470, 0)">
+      <rect width="144" height="30" rx="6" fill="#0A162B" stroke="#0284C7" stroke-width="0.8" stroke-opacity="0.7"/>
+      <text x="12" y="19" class="pill-label">🔐 Key Vault &amp; RBAC</text>
+    </g>
+  </g>
+
+  <!-- Tech Capability Badges Row 2 -->
+  <g transform="translate(62, 268)">
+    <g transform="translate(0, 0)">
+      <rect width="168" height="28" rx="6" fill="#071120" stroke="#1E293B" stroke-width="1"/>
+      <text x="12" y="18" class="pill-label" fill="#94A3B8">🌐 Azure Landing Zones</text>
+    </g>
+    <g transform="translate(178, 0)">
+      <rect width="158" height="28" rx="6" fill="#071120" stroke="#1E293B" stroke-width="1"/>
+      <text x="12" y="18" class="pill-label" fill="#94A3B8">🐳 Docker Containers</text>
+    </g>
+    <g transform="translate(346, 0)">
+      <rect width="158" height="28" rx="6" fill="#071120" stroke="#1E293B" stroke-width="1"/>
+      <text x="12" y="18" class="pill-label" fill="#94A3B8">🛡️ DevSecOps Principles</text>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT: HIGH-TECH TOPOLOGY SCHEMATIC ================= -->
+  
+  <g transform="translate(730, 34)">
+    <!-- Container Card -->
+    <rect width="410" height="272" rx="12" fill="url(#cardGrad)" stroke="#0078D4" stroke-width="1" stroke-opacity="0.35"/>
+    
+    <!-- Window Header -->
+    <path d="M 0 12 C 0 5.373 5.373 0 12 0 L 398 0 C 404.627 0 410 5.373 410 12 L 410 32 L 0 32 Z" fill="#0A162E"/>
+    <circle cx="16" cy="16" r="4" fill="#EF4444" fill-opacity="0.8"/>
+    <circle cx="30" cy="16" r="4" fill="#F59E0B" fill-opacity="0.8"/>
+    <circle cx="44" cy="16" r="4" fill="#10B981" fill-opacity="0.8"/>
+    <text x="64" y="20" class="code-font" font-size="10.5px" fill="#64748B">azure-devops-platform :: topology</text>
+
+    <!-- Circuit Interconnects -->
+    <!-- Input Traces from Nodes 1 & 2 into Central Engine -->
+    <path d="M 115 85 L 140 85 L 140 138 L 160 138" fill="none" stroke="#0078D4" stroke-dasharray="3,3" stroke-width="1.5" stroke-opacity="0.8"/>
+    <path d="M 115 190 L 140 190 L 140 138" fill="none" stroke="#0078D4" stroke-dasharray="3,3" stroke-width="1.5" stroke-opacity="0.8"/>
+    <polygon points="160,138 153,134 153,142" fill="#00C7FF"/>
+
+    <!-- Output Traces from Central Engine to Output Nodes 4 & 5 -->
+    <path d="M 290 138 L 305 138" fill="none" stroke="#00C7FF" stroke-width="2" filter="url(#subtleGlow)"/>
+    <path d="M 305 138 L 305 85 L 320 85" fill="none" stroke="#00C7FF" stroke-width="1.5"/>
+    <path d="M 305 138 L 305 190 L 320 190" fill="none" stroke="#00C7FF" stroke-width="1.5"/>
+    <polygon points="320,85 313,81 313,89" fill="#00C7FF"/>
+    <polygon points="320,190 313,186 313,194" fill="#00C7FF"/>
+
+    <!-- Node 1: Code / Git -->
+    <g transform="translate(15, 65)">
+      <rect width="100" height="40" rx="6" fill="#091429" stroke="#38BDF8" stroke-width="1"/>
+      <text x="10" y="19" class="code-font" font-size="10px" font-weight="600" fill="#38BDF8">📁 Git / GitHub</text>
+      <text x="10" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5px" fill="#64748B">IaC &amp; Pipelines</text>
+    </g>
+
+    <!-- Node 2: Key Vault Secrets -->
+    <g transform="translate(15, 170)">
+      <rect width="100" height="40" rx="6" fill="#091429" stroke="#0284C7" stroke-width="1"/>
+      <text x="10" y="19" class="code-font" font-size="10px" font-weight="600" fill="#38BDF8">🔐 Key Vault</text>
+      <text x="10" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5px" fill="#64748B">Secrets &amp; RBAC</text>
+    </g>
+
+    <!-- Node 3: Core Pipeline & Terraform Engine -->
+    <g transform="translate(160, 110)">
+      <rect width="130" height="56" rx="8" fill="#061A3A" stroke="url(#azureGlow)" stroke-width="1.5" filter="url(#subtleGlow)"/>
+      <text x="12" y="22" class="code-font" font-size="10.5px" font-weight="700" fill="#FFFFFF">⚡ Azure DevOps</text>
+      <text x="12" y="36" class="code-font" font-size="10px" fill="#00C7FF">Terraform Engine</text>
+      <text x="12" y="48" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5px" fill="#94A3B8">Plan → Review → Apply</text>
+    </g>
+
+    <!-- Node 4: Landing Zone VNet -->
+    <g transform="translate(320, 65)">
+      <rect width="78" height="40" rx="6" fill="#091429" stroke="#0078D4" stroke-width="1"/>
+      <text x="8" y="18" class="code-font" font-size="9.5px" font-weight="600" fill="#38BDF8">☁️ Azure LZ</text>
+      <text x="8" y="31" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5px" fill="#64748B">VNet &amp; Bastion</text>
+    </g>
+
+    <!-- Node 5: Compute Workloads -->
+    <g transform="translate(320, 170)">
+      <rect width="78" height="40" rx="6" fill="#091429" stroke="#0078D4" stroke-width="1"/>
+      <text x="8" y="18" class="code-font" font-size="9.5px" font-weight="600" fill="#38BDF8">💻 Workloads</text>
+      <text x="8" y="31" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5px" fill="#64748B">Private VMs</text>
+    </g>
+
+    <!-- Console Status Footer -->
+    <g transform="translate(15, 232)">
+      <rect width="380" height="26" rx="5" fill="#040A14" stroke="#1E293B" stroke-width="0.8"/>
+      <circle cx="14" cy="13" r="3" fill="#10B981"/>
+      <text x="26" y="17" class="code-font" font-size="9.5px" fill="#38BDF8">pipeline_status: passed (zero_hardcoded_secrets)</text>
+    </g>
+  </g>
+</svg>
